@@ -1,0 +1,213 @@
+/* ==========================================================================
+   Base & Box Sizing Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Page & System Typography
+   ========================================================================== */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background-color: #f9fafb;
+    padding: 2rem 1rem;
+}
+
+/* ==========================================================================
+   Page Container (Comfortable Max Width)
+   ========================================================================== */
+main,
+.container,
+#app {
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ==========================================================================
+   Headings & Section Spacing
+   ========================================================================== */
+header,
+section {
+    margin-bottom: 2rem;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+p {
+    color: #4b5563;
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================================
+   Form, Labels & Inputs
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group,
+form>div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.35rem;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #111827;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* ==========================================================================
+   Noticeable "Add Project" Button
+   ========================================================================== */
+button,
+input[type="submit"],
+.btn-submit {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.btn-submit:hover {
+    background-color: #1d4ed8;
+}
+
+button:active,
+input[type="submit"]:active,
+.btn-submit:active {
+    background-color: #1e40af;
+}
+
+/* ==========================================================================
+   Visible Keyboard Focus Outlines (Accessibility)
+   ========================================================================== */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+    border-color: #2563eb;
+}
+
+/* ==========================================================================
+   Empty List State
+   ========================================================================== */
+ul,
+ol,
+#project-list,
+.project-list {
+    list-style: none;
+}
+
+ul:empty::after,
+ol:empty::after,
+#project-list:empty::after,
+.project-list:empty::after {
+    content: "No projects added yet.";
+    display: block;
+    padding: 1.5rem;
+    text-align: center;
+    color: #6b7280;
+    background-color: #f9fafb;
+    border: 1px dashed #d1d5db;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   Responsive Rule (< 560px)
+   ========================================================================== */
+@media (max-width: 560px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    main,
+    .container,
+    #app {
+        padding: 1.25rem 1rem;
+        border-radius: 6px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    button,
+    input[type="submit"],
+    .btn-submit {
+        width: 100%;
+        text-align: center;
+    }
+}
